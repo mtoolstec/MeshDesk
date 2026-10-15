@@ -1,0 +1,8 @@
+{
+  "type": "pocketjs",
+  "name": "Mole Pop",
+  "name_zh": "打地鼠",
+  "icon": "game",
+  "color": "#B86B3D",
+  "entry": "app.js"
+}

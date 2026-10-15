@@ -1,0 +1,22 @@
+name: Build and apps
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: sudo apt-get update && sudo apt-get install -y libssl-dev
+      - run: pip install platformio
+      - run: pio run
+      - run: c++ -std=c++17 -I tests/native_stubs -I include src/CommunicationService.cpp tests/communication_service.test.cpp -o /tmp/communication-test && /tmp/communication-test
+      - run: c++ -std=c++17 -fsanitize=address,undefined -I lib/MeshtasticLite/src -I include tests/meshtastic_protocol.test.cpp -lcrypto -o /tmp/meshtastic-test && /tmp/meshtastic-test
+      - run: c++ -std=c++17 -fsanitize=address,undefined -I include -I .pio/libdeps/wio_tracker_l2/ArduinoJson/src src/ChatStore.cpp tests/chat_store.test.cpp -o /tmp/chat-store-test && /tmp/chat-store-test
+      - run: c++ -std=c++17 -I include tests/chat_read_state.test.cpp -o /tmp/chat-read-test && /tmp/chat-read-test
+      - run: node --test tests/*.test.js
+      - run: python scripts/validate_apps.py

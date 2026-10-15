@@ -1,0 +1,8 @@
+{
+  "type": "pocketjs",
+  "name": "Dinosaur",
+  "name_zh": "恐龙游戏",
+  "icon": "game",
+  "color": "#343434",
+  "entry": "app.js"
+}

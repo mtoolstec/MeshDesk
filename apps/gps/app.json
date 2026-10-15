@@ -1,0 +1,8 @@
+{
+  "type": "pocketjs",
+  "name": "GPS",
+  "name_zh": "GPS",
+  "icon": "map",
+  "color": "#00A866",
+  "entry": "app.js"
+}

@@ -1,0 +1,9 @@
+{
+  "type": "pocketjs",
+  "name": "Chats",
+  "name_zh": "消息",
+  "version": "1.8.0",
+  "icon": "message",
+  "color": "#007AFF",
+  "entry": "app.js"
+}

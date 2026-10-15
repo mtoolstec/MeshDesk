@@ -1,0 +1,8 @@
+{
+  "type": "pocketjs",
+  "name": "Bubble Pop",
+  "name_zh": "泡泡乐",
+  "icon": "game",
+  "color": "#78C7EB",
+  "entry": "app.js"
+}

@@ -1,0 +1,8 @@
+{
+  "type": "pocketjs",
+  "name": "Fruit Party",
+  "name_zh": "水果派对",
+  "icon": "game",
+  "color": "#FF9A70",
+  "entry": "app.js"
+}

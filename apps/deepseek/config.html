@@ -1,0 +1,40 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DeepSeek 余额配置</title>
+<style>
+body{font:16px system-ui,sans-serif;max-width:620px;margin:32px auto;padding:0 18px;color:#1d2540;background:#f4f6ff}
+main{background:white;border-radius:16px;padding:24px;box-shadow:0 5px 24px #1d25401a}h1{margin-top:0;color:#4d6bfe}
+label{display:block;margin:18px 0 6px;font-weight:600}input{width:100%;box-sizing:border-box;padding:11px;border:1px solid #cbd2ea;border-radius:8px;font-size:15px}
+button{margin-top:22px;padding:11px 18px;border:0;border-radius:8px;background:#4d6bfe;color:white;font-size:15px;cursor:pointer}
+#msg{margin-top:16px;color:#66708f}.tip{color:#66708f;font-size:13px;line-height:1.6}
+</style>
+<main>
+<h1>DeepSeek 余额监控</h1>
+<p class="tip">API Key 只保存在设备 SD 卡的 /appdata/deepseek/config.json 中（明文）。保存后重新打开设备上的应用即可查询余额。</p>
+<label for="key">DeepSeek API Key</label>
+<input id="key" type="password" autocomplete="off" placeholder="sk-...">
+<label for="url">API 地址</label>
+<input id="url" value="https://api.deepseek.com" spellcheck="false">
+<button id="save">保存配置</button><span id="msg"></span>
+</main>
+<script>
+const key=document.querySelector('#key'),url=document.querySelector('#url'),msg=document.querySelector('#msg');
+const dataPath='/appdata/deepseek/config.json',legacyPath='/apps/deepseek/config.json';
+async function configAt(path){const r=await fetch('/api/file?path='+encodeURIComponent(path));if(r.status===404)return null;if(!r.ok)throw Error('读取配置失败');return r.json()}
+async function load(){try{const c=await configAt(dataPath)||await configAt(legacyPath);if(c){key.value=c.apiKey||'';url.value=c.baseUrl||url.value}}catch(e){msg.textContent=e.message}}
+document.querySelector('#save').onclick=async()=>{
+ const apiKey=key.value.trim(),baseUrl=url.value.trim().replace(/\/$/,'');
+ if(!apiKey){msg.textContent='请输入 API Key';return}if(!/^https:\/\//i.test(baseUrl)){msg.textContent='API 地址必须使用 HTTPS';return}
+ try{
+  const dir=await fetch('/api/mkdir',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams({path:'/appdata/deepseek'})});
+  if(!dir.ok)throw Error('创建数据目录失败');
+  const body=JSON.stringify({apiKey,baseUrl});
+  const r=await fetch('/api/save?path='+encodeURIComponent(dataPath),{method:'POST',headers:{'Content-Type':'text/plain'},body});
+  if(!r.ok)throw Error('保存失败');
+  const check=await configAt(dataPath);if(!check||check.apiKey!==apiKey||check.baseUrl!==baseUrl)throw Error('保存校验失败');
+  const old=await fetch('/api/delete',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams({path:legacyPath})});
+  msg.textContent=old.ok?'已保存，请重新打开应用':'已保存；旧配置未删除，请在文件管理中检查';
+ }catch(e){msg.textContent=e.message}
+};load();
+</script>

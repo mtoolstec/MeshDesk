@@ -1,0 +1,8 @@
+{
+  "type": "pocketjs",
+  "name": "Little Piano",
+  "name_zh": "小小钢琴",
+  "icon": "game",
+  "color": "#B5A5F4",
+  "entry": "app.js"
+}

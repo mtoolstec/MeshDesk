@@ -1,0 +1,8 @@
+{
+  "type": "pocketjs",
+  "name": "Pair Cards",
+  "name_zh": "翻翻乐",
+  "icon": "game",
+  "color": "#6B5CE7",
+  "entry": "app.js"
+}

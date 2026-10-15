@@ -1,0 +1,8 @@
+{
+  "type": "pocketjs",
+  "name": "2.4 GHz SDR",
+  "name_zh": "2.4G 频谱",
+  "icon": "radio",
+  "color": "#153B7B",
+  "entry": "app.js"
+}

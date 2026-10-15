@@ -1,0 +1,9 @@
+<!-- Original geometric cloud icon, distributed under the project GPL-3.0-only license. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g fill="#ffffff">
+    <circle cx="9" cy="19" r="7"/>
+    <circle cx="17" cy="13" r="9"/>
+    <circle cx="25" cy="20" r="6"/>
+    <rect x="9" y="19" width="16" height="7"/>
+  </g>
+</svg>

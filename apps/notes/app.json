@@ -1,0 +1,8 @@
+{
+  "type": "pocketjs",
+  "name": "Notes",
+  "name_zh": "笔记",
+  "icon": "file",
+  "color": "#FFB000",
+  "entry": "app.js"
+}

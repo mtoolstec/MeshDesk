@@ -1,0 +1,8 @@
+{
+  "type": "pocketjs",
+  "name": "Animal Puzzle",
+  "name_zh": "动物拼拼乐",
+  "icon": "game",
+  "color": "#D49ADC",
+  "entry": "app.js"
+}

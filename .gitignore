@@ -1,0 +1,29 @@
+.pio/
+.DS_Store
+outputs
+__pycache__/
+
+# Personal/runtime data written by PocketJS apps, never commit
+apps/adsb/config.js
+apps/adsb/last-location.json
+apps/notes/*.txt
+
+.deps/
+
+# SD application data and API credentials
+/appdata/
+apps/deepseek/config.json*
+
+# Local secrets and developer artifacts
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.pyc
+*.pyo
+/backup/
+/backups/
+/device-backup/

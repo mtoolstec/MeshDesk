@@ -1,0 +1,8 @@
+{
+  "type": "pocketjs",
+  "name": "Block Stack",
+  "name_zh": "俄罗斯方块",
+  "icon": "game",
+  "color": "#0A84FF",
+  "entry": "app.js"
+}

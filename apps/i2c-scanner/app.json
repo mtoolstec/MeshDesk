@@ -1,0 +1,8 @@
+{
+  "type": "pocketjs",
+  "name": "I2C Scanner",
+  "name_zh": "I2C Scanner",
+  "icon": "settings",
+  "color": "#0A84FF",
+  "entry": "app.js"
+}

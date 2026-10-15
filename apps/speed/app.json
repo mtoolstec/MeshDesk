@@ -1,0 +1,8 @@
+{
+  "type": "pocketjs",
+  "name": "Speed",
+  "name_zh": "速度",
+  "icon": "speed",
+  "color": "#00C7D9",
+  "entry": "app.js"
+}

@@ -1,0 +1,8 @@
+{
+  "type": "pocketjs",
+  "name": "Sky Radar",
+  "name_zh": "飞机雷达",
+  "icon": "map",
+  "color": "#0A84FF",
+  "entry": "app.js"
+}

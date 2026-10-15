@@ -1,0 +1,8 @@
+{
+  "type": "pocketjs",
+  "name": "Pocket Hello",
+  "name_zh": "Pocket 示例",
+  "icon": "game",
+  "color": "#5E5CE6",
+  "entry": "app.js"
+}

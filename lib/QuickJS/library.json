@@ -1,0 +1,19 @@
+{
+  "name": "QuickJS",
+  "version": "2026.06.04-wio1",
+  "description": "Pinned Bellard QuickJS runtime for the Wio Tracker L2 Pocket app host",
+  "license": "MIT",
+  "build": {
+    "flags": [
+      "-std=gnu11",
+      "-D_GNU_SOURCE"
+    ],
+    "srcFilter": [
+      "+<cutils.c>",
+      "+<dtoa.c>",
+      "+<libregexp.c>",
+      "+<libunicode.c>",
+      "+<quickjs.c>"
+    ]
+  }
+}

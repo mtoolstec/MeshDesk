@@ -1,0 +1,8 @@
+{
+  "type": "pocketjs",
+  "name": "2048",
+  "name_zh": "2048",
+  "icon": "game",
+  "color": "#EDC22E",
+  "entry": "app.js"
+}

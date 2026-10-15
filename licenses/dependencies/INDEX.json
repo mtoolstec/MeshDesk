@@ -1,0 +1,57 @@
+[
+  {
+    "dependency": "Adafruit ADS1X15",
+    "notice": "licenses/dependencies/Adafruit ADS1X15/license.txt",
+    "sha256": "4b6bb6d827e9da638841bf575c6068b83aaaf0d9508e892d3ea27e2525b070e8"
+  },
+  {
+    "dependency": "Adafruit BusIO",
+    "notice": "licenses/dependencies/Adafruit BusIO/LICENSE",
+    "sha256": "86e9fafdb50d2a85d8fef369b4635b5a1b89160603e5b1f95484df0804b49508"
+  },
+  {
+    "dependency": "ArduinoJson",
+    "notice": "licenses/dependencies/ArduinoJson/LICENSE.txt",
+    "sha256": "4a7ee9c96b28cbf30c5bf7c2d211a0ef57179f0328e68ad7b7fa7d754b7da1a2"
+  },
+  {
+    "dependency": "CayenneLPP",
+    "notice": "licenses/dependencies/CayenneLPP/LICENSE.md",
+    "sha256": "c0fc02a86ae2b179c4729694c523bbf42da674e5136ed8e12e3cb2f26556ea9f"
+  },
+  {
+    "dependency": "LovyanGFX",
+    "notice": "licenses/dependencies/LovyanGFX/license.txt",
+    "sha256": "ec7c22d763503f016c1e743e6089042e780fbb1c118ebcc0b1eb72232e8903b3"
+  },
+  {
+    "dependency": "Melopero RV3028",
+    "notice": "licenses/dependencies/Melopero RV3028/LICENSE",
+    "sha256": "55b1eee8c9a5891048b3111a481131adb0b53ddb7e9d136f3fa494cfa903bdc0"
+  },
+  {
+    "dependency": "RTClib",
+    "notice": "licenses/dependencies/RTClib/license.txt",
+    "sha256": "6d594832648bfe9a8b0aa69ee21ce2c72f696170fcd3c21b82c3284174cd2c19"
+  },
+  {
+    "dependency": "RadioLib",
+    "notice": "licenses/dependencies/RadioLib/license.txt",
+    "sha256": "025378110a5679f82e8a59c19cf91b8ed760dc8752e5504596ef0c0592b8a3e8"
+  },
+  {
+    "dependency": "audio-driver",
+    "notice": "licenses/dependencies/audio-driver/License.txt",
+    "sha256": "43e7756b28afd543e9639daa5354d2faf87970b00ad406a7522735ecffdd419c"
+  },
+  {
+    "dependency": "lvgl",
+    "notice": "licenses/dependencies/lvgl/LICENCE.txt",
+    "sha256": "27a80bd36832ab42d35ad60c08b2b230a807a9bc0d58e94ec1531543dc49cbe8"
+  },
+  {
+    "dependency": "Crypto 0.4.0 (AES source header)",
+    "notice": "licenses/dependencies/Crypto/header-MIT.txt",
+    "sha256": "a58522c10b8e46daae34fe8dc5e5e25518f667d4c4a5aeb67af4cafde9a1591b"
+  }
+]

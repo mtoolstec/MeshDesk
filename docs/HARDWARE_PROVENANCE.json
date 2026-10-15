@@ -1,0 +1,15 @@
+{
+  "referenceSha256": "a2b037b2575825fa6064d780962bce84dc0d3010ae97bf8a9a765e71343b520b",
+  "reviewedReference": [
+    "src/graphics/TFTDisplay.cpp SEEED_WIO_TRACKER_L2 branch",
+    "variants/esp32s3/seeed_wio_tracker_L2/variant.h",
+    "variants/esp32s3/seeed_wio_tracker_L2/variant.cpp"
+  ],
+  "findings": [
+    "WioBacklight LP5814 initialization follows the same register sequence as Wio_Tracker_Light",
+    "WioDisplay constructor follows matching bus/panel/touch configuration",
+    "WioDisplay::init_impl uses the same Wire.end/begin workaround after LGFX init",
+    "BoardPins contains hardware mappings; these values alone do not establish code licensing"
+  ],
+  "disposition": "GPL-derived implementation retained under GPL-3.0-only. Reference license and source notices are preserved under licenses/hardware-reference."
+}

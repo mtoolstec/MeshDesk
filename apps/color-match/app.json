@@ -1,0 +1,8 @@
+{
+  "type": "pocketjs",
+  "name": "Color Match",
+  "name_zh": "颜色配对",
+  "icon": "game",
+  "color": "#FF8A65",
+  "entry": "app.js"
+}

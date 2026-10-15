@@ -1,0 +1,7 @@
+{
+  "name": "MeshCore-ed25519",
+  "version": "1.0.0",
+  "build": {
+    "srcFilter": "+<*.c>"
+  }
+}

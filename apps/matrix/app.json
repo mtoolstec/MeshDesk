@@ -1,0 +1,8 @@
+{
+  "type": "pocketjs",
+  "name": "Matrix Rain",
+  "name_zh": "矩阵瀑布",
+  "icon": "settings",
+  "color": "#00C853",
+  "entry": "app.js"
+}
